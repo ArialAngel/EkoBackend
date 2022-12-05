@@ -1,0 +1,12 @@
+{% extends 'users/home.html' %}
+
+{% block content %}
+    <br>
+    <div class="alert alert-success" role="alert">
+        <h2 style="text-align: center;">sesion cerrada!</h2>
+    </div>
+
+    <h3>¡Volver a iniciar sesion?</h3>
+    <a href="{% url 'login' %}">---> Inicia sesion</a> <br>
+    <a href="{% url 'home' %}"><--- Volver al inicio</a>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% if user.is_authenticated %}
+    <div class="alert alert-success" role="alert">
+        <h3>Bienvenido {{ user.username }}!</h3>
+        <a href="{% url 'logout' %}">Cerrar sesion?</a>
+    </div>
+{% else %}
+    <div class="alert alert-success" role="alert">
+        <h3>Bienvenido</h3>
+        <a href="{% url 'register' %}">Registrate</a>
+        <a href="{% url 'login' %}">Inicia sesion</a>
+    </div>
+{% endif %}
